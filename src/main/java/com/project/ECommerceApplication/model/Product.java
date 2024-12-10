@@ -1,6 +1,6 @@
 package com.project.ECommerceApplication.model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,7 +18,6 @@ public class Product {
     private Double price;
 
     @ManyToOne
-    @JsonBackReference // Prevents serialization of the "products" field in Category
     private Category category;
 
     public Long getId() {
